@@ -1,46 +1,519 @@
-  <!DOCTYPE html>                                                                                                                                                                                        
-  <html lang="en">
-  <head>                                                                                                                                                                                                 
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Privacy Policy - Trend Top 10</title>
-    <style>
-      body { font-family: sans-serif; max-width: 800px; margin: 40px auto; padding: 0 20px; line-height: 1.7; color: #333; }
-      h1 { color: #1e6c93; }
-      h2 { color: #226e93; margin-top: 28px; }
-    </style>
-  </head>
-  <body>
-    <h1>Privacy Policy - Trend Top 10</h1>
-    <p><strong>Effective date:</strong> February 21, 2026</p>
-    <p>Trend Top 10 ("the App") is developed and maintained by an independent developer. This Privacy Policy explains how information is collected and used when you use the App.</p>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>GoldZero | Developer Portfolio</title>
+  <meta name="description" content="GoldZero - Software Developer, DBA, and AI-assisted app builder." />
+  <style>
+    :root {
+      --bg: #0b1020;
+      --panel: rgba(17, 24, 39, 0.82);
+      --panel-2: rgba(30, 41, 59, 0.7);
+      --text: #e5e7eb;
+      --muted: #94a3b8;
+      --accent: #60a5fa;
+      --accent-2: #22d3ee;
+      --border: rgba(148, 163, 184, 0.18);
+      --shadow: 0 20px 50px rgba(0, 0, 0, 0.35);
+      --max: 1240px;
+    }
 
-    <h2>1. Information We Collect</h2>
-    <p>The App itself does not collect, store, or transmit any personal information. We do not require account registration, login, or any personal data to use the App.</p>
+    * { box-sizing: border-box; }
 
-    <h2>2. Third-Party Services</h2>
-    <p>The App uses the following third-party services that may collect information:</p>
-    <p>• <strong>Google AdMob</strong> - Used to display advertisements. AdMob may collect device identifiers, IP address, and usage data to serve personalized or non-personalized ads. For details, see
-   <a href="https://policies.google.com/privacy">Google's Privacy Policy</a>.</p>
+    html { scroll-behavior: smooth; }
 
-    <h2>3. Data Sources</h2>
-    <p>The App aggregates publicly available data from open APIs and public RSS feeds (e.g., government open data, public news RSS feeds, open-source project data). No user data is sent to these
-  services; only public data is fetched from them.</p>
+    body {
+      margin: 0;
+      font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      color: var(--text);
+      background:
+        radial-gradient(circle at top left, rgba(96, 165, 250, 0.16), transparent 28%),
+        radial-gradient(circle at top right, rgba(34, 211, 238, 0.12), transparent 26%),
+        linear-gradient(180deg, #020617 0%, #0b1020 100%);
+      line-height: 1.65;
+    }
 
-    <h2>4. Log Data</h2>
-    <p>The App does not collect log data or crash reports. No analytics SDK is integrated.</p>
+    a { color: inherit; }
 
-    <h2>5. Cookies</h2>
-    <p>The App does not use cookies. Third-party ad services may use cookies or similar technologies as described in their respective privacy policies.</p>
+    .container {
+      width: min(calc(100% - 32px), var(--max));
+      margin: 0 auto;
+    }
 
-    <h2>6. Children's Privacy</h2>
-    <p>The App is not directed at children under 13. We do not knowingly collect personal information from children.</p>
+    .nav {
+      position: sticky;
+      top: 0;
+      z-index: 20;
+      backdrop-filter: blur(14px);
+      background: rgba(2, 6, 23, 0.55);
+      border-bottom: 1px solid rgba(148, 163, 184, 0.12);
+    }
 
-    <h2>7. Changes to This Policy</h2>
-    <p>We may update this Privacy Policy from time to time. Changes will be reflected within the App and by updating the effective date above.</p>
+    .nav-inner {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 16px 0;
+    }
 
-    <h2>8. Contact</h2>
-    <p>If you have any questions about this Privacy Policy, please contact us at:<br>
-    Email: <a href="mailto:goldzero.tot@gmail.com">goldzero.tot@gmail.com</a></p>
-  </body>
-  </html>
+    .brand {
+      font-weight: 800;
+      letter-spacing: 0.04em;
+      text-decoration: none;
+    }
+
+    .brand .gold { color: #f5c542; }
+
+    .brand .zero { color: #60a5fa; }
+
+    .nav-links {
+      display: flex;
+      gap: 18px;
+      flex-wrap: wrap;
+      font-size: 0.95rem;
+      color: var(--muted);
+    }
+
+    .nav-links a {
+      text-decoration: none;
+      transition: color 0.2s ease;
+    }
+
+    .nav-links a:hover { color: var(--text); }
+
+    .hero {
+      padding: 92px 0 32px;
+    }
+
+    .hero-card {
+      display: grid;
+      grid-template-columns: 1.5fr 1fr;
+      gap: 24px;
+      background: linear-gradient(180deg, rgba(15, 23, 42, 0.85), rgba(15, 23, 42, 0.65));
+      border: 1px solid var(--border);
+      border-radius: 28px;
+      padding: 36px;
+      box-shadow: var(--shadow);
+    }
+
+    .eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 7px 12px;
+      border: 1px solid rgba(96, 165, 250, 0.25);
+      border-radius: 999px;
+      color: #bfdbfe;
+      background: rgba(96, 165, 250, 0.08);
+      font-size: 0.88rem;
+      margin-bottom: 18px;
+    }
+
+    h1, h2, h3, p { margin-top: 0; }
+
+    h1 {
+      font-size: clamp(2.4rem, 5vw, 4.5rem);
+      line-height: 1.05;
+      margin-bottom: 14px;
+      letter-spacing: -0.04em;
+    }
+
+    .headline {
+      font-size: 1.15rem;
+      color: #cbd5e1;
+      max-width: 640px;
+      margin-bottom: 16px;
+    }
+
+    .tagline {
+      font-size: 1.05rem;
+      color: var(--accent-2);
+      margin-bottom: 28px;
+      font-weight: 600;
+    }
+
+    .hero-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      margin-bottom: 18px;
+    }
+
+    .button {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      min-height: 46px;
+      padding: 0 16px;
+      border-radius: 14px;
+      border: 1px solid transparent;
+      text-decoration: none;
+      font-weight: 700;
+      transition: transform 0.18s ease, opacity 0.18s ease, border-color 0.18s ease;
+    }
+
+    .button:hover { transform: translateY(-1px); }
+    .button.primary {
+      color: #08111f;
+      background: linear-gradient(135deg, var(--accent), var(--accent-2));
+    }
+    .button.secondary {
+      color: var(--text);
+      background: rgba(148, 163, 184, 0.08);
+      border-color: rgba(148, 163, 184, 0.18);
+    }
+
+    .hero-meta {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      color: var(--muted);
+      font-size: 0.96rem;
+    }
+
+    .meta-chip {
+      padding: 8px 12px;
+      border-radius: 999px;
+      background: rgba(148, 163, 184, 0.08);
+      border: 1px solid rgba(148, 163, 184, 0.12);
+    }
+
+    .summary-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 14px;
+      align-content: start;
+    }
+
+    .mini-card {
+      background: rgba(15, 23, 42, 0.82);
+      border: 1px solid var(--border);
+      border-radius: 20px;
+      padding: 18px;
+    }
+
+    .mini-card .label {
+      color: var(--muted);
+      font-size: 0.88rem;
+      margin-bottom: 8px;
+    }
+
+    .mini-card strong {
+      display: block;
+      font-size: 1.08rem;
+      color: #f8fafc;
+    }
+
+    main {
+      padding: 18px 0 64px;
+    }
+
+    .section {
+      margin-top: 22px;
+      background: var(--panel);
+      border: 1px solid var(--border);
+      border-radius: 26px;
+      padding: 28px;
+      box-shadow: var(--shadow);
+    }
+
+    .section h2 {
+      font-size: 1.45rem;
+      margin-bottom: 14px;
+      letter-spacing: -0.02em;
+    }
+
+    .section-intro {
+      color: var(--muted);
+      margin-bottom: 18px;
+      max-width: 760px;
+    }
+
+    .two-col {
+      display: grid;
+      grid-template-columns: 1.1fr 0.9fr;
+      gap: 20px;
+    }
+
+    .experience-list,
+    .project-list,
+    .contact-list,
+    .workflow-list {
+      display: grid;
+      gap: 14px;
+    }
+
+    .item {
+      background: var(--panel-2);
+      border: 1px solid var(--border);
+      border-radius: 20px;
+      padding: 20px;
+    }
+
+    .item h3 {
+      margin-bottom: 6px;
+      font-size: 1.08rem;
+    }
+
+    .item .sub {
+      color: var(--accent-2);
+      font-size: 0.95rem;
+      margin-bottom: 12px;
+      font-weight: 600;
+    }
+
+    ul {
+      margin: 0;
+      padding-left: 18px;
+      color: #dbe4f0;
+    }
+
+    .stack-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 14px;
+    }
+
+    .stack-card {
+      background: var(--panel-2);
+      border: 1px solid var(--border);
+      border-radius: 20px;
+      padding: 18px;
+    }
+
+    .stack-card h3 {
+      margin-bottom: 12px;
+      font-size: 1rem;
+    }
+
+    .chips {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+
+    .chip {
+      padding: 8px 12px;
+      border-radius: 999px;
+      background: rgba(96, 165, 250, 0.1);
+      border: 1px solid rgba(96, 165, 250, 0.15);
+      color: #dbeafe;
+      font-size: 0.92rem;
+    }
+
+    .footer {
+      padding: 30px 0 56px;
+      color: var(--muted);
+      text-align: center;
+      font-size: 0.95rem;
+    }
+
+    .footer a {
+      color: #cbd5e1;
+      text-decoration: none;
+    }
+
+    @media (max-width: 860px) {
+      .hero-card,
+      .two-col,
+      .stack-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .summary-grid {
+        grid-template-columns: 1fr 1fr;
+      }
+    }
+
+    @media (max-width: 640px) {
+      .nav-inner {
+        align-items: flex-start;
+        gap: 12px;
+        flex-direction: column;
+      }
+
+      .hero {
+        padding-top: 48px;
+      }
+
+      .hero-card,
+      .section {
+        padding: 22px;
+        border-radius: 22px;
+      }
+
+      .summary-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .hero-meta,
+      .hero-actions,
+      .nav-links {
+        gap: 10px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header class="nav">
+    <div class="container nav-inner">
+      <a class="brand" href="#top"><span class="gold">Gold</span><span class="zero">Zero</span></a>
+      <nav class="nav-links" aria-label="Primary">
+        <a href="#about">About</a>
+        <a href="#experience">Experience</a>
+        <a href="#projects">Projects</a>
+        
+        <a href="#contact">Contact</a>
+        <a href="/privacy.html">Privacy</a>
+      </nav>
+    </div>
+  </header>
+
+  <div class="container">
+    <section class="hero" id="top">
+      <div class="hero-card">
+        <div>
+          <div class="eyebrow">Software Developer · DBA · AI-assisted Builder</div>
+          <h1><span style="color:#f5c542">Gold</span><span style="color:#60a5fa">Zero</span></h1>
+          <p class="headline">
+            Developer with 13+ years of software experience, currently working across both development and database administration while building practical apps with AI-assisted workflows.
+          </p>
+          <p class="tagline">Code. Data. AI. Built by GoldZero.</p>
+          
+          <div class="hero-meta">
+            <span class="meta-chip">13+ Years in Software Development</span>
+            <span class="meta-chip">MSSQL Database Administrator</span>
+            <span class="meta-chip">AI-assisted App Builder</span>
+          </div>
+        </div>
+        <div class="summary-grid">
+          <div class="mini-card">
+            <div class="label">Approach</div>
+            <strong>Domain-first development</strong>
+            <span>Focus on understanding the business domain and maximizing its value through software.</span>
+          </div>
+          <div class="mini-card">
+            <div class="label">Workflow</div>
+            <strong>Experiment & iterate</strong>
+            <span>I try every practical tool available — including AI — to improve productivity and ideas.</span>
+          </div>
+          <div class="mini-card">
+            <div class="label">Perspective</div>
+            <strong>Developer + DBA</strong>
+            <span>Building systems with both application logic and data reliability in mind.</span>
+          </div>
+          <div class="mini-card">
+            <div class="label">Engineering Mindset</div>
+            <strong>Practical problem solving</strong>
+            <span>Prefer simple, useful solutions that work in real environments rather than theoretical ones.</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <main>
+      <section class="section" id="about">
+        <h2>About</h2>
+        <p class="section-intro">
+          I am a software developer with more than 13 years of experience, and I have also been working as a database administrator for the past 2+ years in parallel. To stay sharp and keep evolving, I actively embrace AI-assisted development in my day-to-day workflow.
+        </p>
+        <div class="two-col">
+          <div class="item">
+            <h3>What I build</h3>
+            <p>
+              I focus on small but useful apps, lightweight services, and practical web tools. My goal is to turn ideas into working products quickly, then improve them through iteration and real usage.
+            </p>
+          </div>
+          <div class="item">
+            <h3>How I work</h3>
+            <p>
+              I combine development experience, data awareness, and AI-assisted workflows to move faster without losing structure. That means faster prototyping, clearer implementation, and better operational thinking.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <section class="section" id="experience">
+        <h2>Experience</h2>
+        <p class="section-intro">
+          My current profile is built around both product development and database operations, bringing together application thinking and data reliability.
+        </p>
+        <div class="experience-list">
+          <div class="item">
+            <h3>Software Developer</h3>
+            <div class="sub">13+ years experience</div>
+            <ul>
+              <li>Broad experience across software, services, and system development.</li>
+              <li>Hands-on work in application design, implementation, and iterative improvement.</li>
+              <li>Personal app development with a focus on practical and user-friendly products.</li>
+            </ul>
+          </div>
+          <div class="item">
+            <h3>Database Administrator (DBA)</h3>
+            <div class="sub">2+ years experience · parallel role</div>
+            <ul>
+              <li>MSSQL (Microsoft SQL Server) database operations and stability support.</li>
+              <li>Data-driven service design and performance-aware database management (MSSQL).</li>
+              <li>Ongoing DBA responsibilities alongside software development work.</li>
+            </ul>
+          </div>
+          <div class="item">
+            <h3>AI-assisted Development</h3>
+            <div class="sub">Active part of my current workflow</div>
+            <ul>
+              <li>Used to accelerate app development, feature planning, prototyping, and iteration.</li>
+              <li>Applied in real product creation, including released apps.</li>
+              <li>Part of an intentional effort to keep pace with evolving development practices.</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <section class="section" id="projects">
+        <h2>Projects</h2>
+        <p class="section-intro">
+          A selected project that reflects my current direction: shipping practical products with a lean workflow and continuous improvement.
+        </p>
+        <div class="project-list">
+          <div class="item">
+            <h3>Trend Top 10</h3>
+            <div class="sub">Android App</div>
+            <p>
+              An Android app that presents trending information in a simple and accessible way. The app was developed with an AI-assisted workflow and published as a real product.
+            </p>
+            <ul>
+              <li>Built for quick access to trend-based information.</li>
+              <li>Developed with Android-focused implementation and practical UX in mind.</li>
+              <li>Integrated with Google AdMob for monetization.</li>
+            </ul>
+            <p style="margin-top: 14px;">
+              <a class="button secondary" href="https://play.google.com/store/apps/details?id=com.goldzerotot.trendtop10" target="_blank" rel="noreferrer">Google Play</a>
+            </p>
+          </div>
+        </div>
+      </section>
+
+      
+
+      <section class="section" id="contact">
+        <h2>Contact</h2>
+        <p class="section-intro">
+          This website and all listed projects are personal work and are not related to any employer.
+        </p>
+        <div class="contact-list">
+          <div class="item">
+            <h3>Email</h3>
+            <p><a href="mailto:goldzero.tot@gmail.com">goldzero.tot@gmail.com</a></p>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <p>© 2026 GoldZero · Personal developer profile</p>
+    </footer>
+  </div>
+</body>
+</html>
